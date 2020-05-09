@@ -28,6 +28,8 @@ public class Solution {
         int result = diagonalDifference(matrix);
 
         System.out.println(result);
+
+        scan.close();
     }
 
 
