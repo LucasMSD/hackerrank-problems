@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution {
@@ -25,10 +26,6 @@ public class Solution {
 
 
     static long aVeryBigSum(long[] ar) {
-        long sum = 0L;
-
-        for (long a : ar) sum += a;
-
-        return sum;
+        return Arrays.stream(ar).reduce(0, (x, y) -> x+y);
     }
 }
