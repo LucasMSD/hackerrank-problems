@@ -1,17 +1,13 @@
-import com.sun.security.jgss.GSSUtil;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Solution {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         List<Integer> a = Stream.of(scan.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
@@ -21,8 +17,10 @@ public class Solution {
         List<Integer> result = compareTriplets(a, b);
 
         System.out.println(result);
+
+        scan.close();
     }
-    
+
 
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
         List<Integer> result = new ArrayList<>(Arrays.asList(0,0));
