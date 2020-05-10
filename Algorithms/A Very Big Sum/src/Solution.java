@@ -26,6 +26,6 @@ public class Solution {
 
 
     static long aVeryBigSum(long[] ar) {
-        return Arrays.stream(ar).reduce(0, (x, y) -> x+y);
+        return Arrays.stream(ar).sum();
     }
 }
